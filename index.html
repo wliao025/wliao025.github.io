@@ -44,17 +44,13 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .avatar-placeholder {
+    .avatar {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: #dde4f0;
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      color: var(--accent);
+      object-fit: cover;
+      border: 2px solid var(--border);
     }
 
     .header-info h1 {
@@ -108,15 +104,55 @@
       max-width: 640px;
     }
 
+    /* ── Background ── */
+    .bg-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bg-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .bg-year {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      min-width: 90px;
+      padding-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .bg-content .role {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .bg-content .institution {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .bg-content .detail {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
     /* ── Publications ── */
     .pub-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
 
     .pub-item {
-      padding: 18px 20px;
+      padding: 16px 20px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -125,7 +161,7 @@
     .pub-item:hover { border-color: var(--accent); }
 
     .pub-title {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       margin-bottom: 4px;
@@ -133,20 +169,20 @@
     }
 
     .pub-authors {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .pub-meta {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .pub-journal {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       font-style: italic;
       color: #555;
     }
@@ -155,15 +191,6 @@
       font-size: 0.8rem;
       font-family: 'Arial', sans-serif;
       color: var(--text-muted);
-    }
-
-    .pub-citations {
-      font-size: 0.78rem;
-      font-family: 'Arial', sans-serif;
-      color: var(--text-muted);
-      background: #f0f4ff;
-      border-radius: 4px;
-      padding: 1px 7px;
     }
 
     /* ── Footer ── */
@@ -182,20 +209,15 @@
 <div class="container">
 
   <header>
-    <div class="avatar-placeholder">W</div>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/69017920?v=4" alt="Wei-Cheng Liao">
     <div class="header-info">
       <h1>Wei-Cheng Liao</h1>
       <p class="position">Postdoctoral Researcher · The Pennsylvania State University</p>
       <div class="links">
-        <a href="https://scholar.google.com/citations?user=UORXMo4AAAAJ&hl=en" target="_blank">
-          &#x1F4D6; Google Scholar
-        </a>
-        <a href="https://www.linkedin.com/in/wliao025/" target="_blank">
-          &#x1F517; LinkedIn
-        </a>
-        <a href="mailto:wliao025@ucr.edu">
-          &#x2709; wliao025@ucr.edu
-        </a>
+        <a href="https://scholar.google.com/citations?user=UORXMo4AAAAJ&hl=en" target="_blank">&#x1F4D6; Google Scholar</a>
+        <a href="https://github.com/wliao025" target="_blank">&#x1F4BB; GitHub</a>
+        <a href="https://www.linkedin.com/in/wliao025/" target="_blank">&#x1F517; LinkedIn</a>
+        <a href="mailto:wliao025@ucr.edu">&#x2709; wliao025@ucr.edu</a>
       </div>
     </div>
   </header>
@@ -210,6 +232,40 @@
   </section>
 
   <section>
+    <h2>Background</h2>
+    <div class="bg-list">
+
+      <div class="bg-item">
+        <div class="bg-year">2023 – present</div>
+        <div class="bg-content">
+          <div class="role">Postdoctoral Researcher (Eberly Research Scholar)</div>
+          <div class="institution">Department of Physics, Pennsylvania State University</div>
+          <div class="detail">Quantum optics · Advisor: Prof. Ying-Ming Shao</div>
+        </div>
+      </div>
+
+      <div class="bg-item">
+        <div class="bg-year">2017 – 2023</div>
+        <div class="bg-content">
+          <div class="role">Ph.D. in Physics</div>
+          <div class="institution">University of California, Riverside</div>
+          <div class="detail">Spintronics · Advisor: Prof. Jing Shi</div>
+        </div>
+      </div>
+
+      <div class="bg-item">
+        <div class="bg-year">– 2017</div>
+        <div class="bg-content">
+          <div class="role">B.S. &amp; M.S. in Physics</div>
+          <div class="institution">National Taiwan University</div>
+          <div class="detail">Semiconductor optics · Advisor: Prof. Yang-Fang Chen</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
     <h2>Publications</h2>
     <div class="pub-list">
 
@@ -219,7 +275,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Nano Letters</span>
           <span class="pub-year">2025</span>
-          <span class="pub-citations">3 citations</span>
         </div>
       </div>
 
@@ -229,7 +284,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Journal of Applied Physics</span>
           <span class="pub-year">2025</span>
-          <span class="pub-citations">4 citations</span>
         </div>
       </div>
 
@@ -239,7 +293,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Applied Physics Letters</span>
           <span class="pub-year">2024</span>
-          <span class="pub-citations">11 citations</span>
         </div>
       </div>
 
@@ -249,7 +302,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Chemistry – A European Journal</span>
           <span class="pub-year">2022</span>
-          <span class="pub-citations">1 citation</span>
         </div>
       </div>
 
@@ -259,7 +311,6 @@
         <div class="pub-meta">
           <span class="pub-journal">ACS Nano</span>
           <span class="pub-year">2019</span>
-          <span class="pub-citations">22 citations</span>
         </div>
       </div>
 
@@ -269,7 +320,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Advanced Materials Technologies</span>
           <span class="pub-year">2018</span>
-          <span class="pub-citations">26 citations</span>
         </div>
       </div>
 
@@ -279,7 +329,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Scientific Reports</span>
           <span class="pub-year">2018</span>
-          <span class="pub-citations">110 citations</span>
         </div>
       </div>
 
@@ -289,7 +338,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Organic Electronics</span>
           <span class="pub-year">2018</span>
-          <span class="pub-citations">21 citations</span>
         </div>
       </div>
 
@@ -299,7 +347,6 @@
         <div class="pub-meta">
           <span class="pub-journal">ACS Applied Nano Materials</span>
           <span class="pub-year">2017</span>
-          <span class="pub-citations">35 citations</span>
         </div>
       </div>
 
@@ -309,7 +356,6 @@
         <div class="pub-meta">
           <span class="pub-journal">ACS Photonics</span>
           <span class="pub-year">2017</span>
-          <span class="pub-citations">45 citations</span>
         </div>
       </div>
 
@@ -319,7 +365,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Advanced Materials Technologies</span>
           <span class="pub-year">2017</span>
-          <span class="pub-citations">50 citations</span>
         </div>
       </div>
 
@@ -329,7 +374,6 @@
         <div class="pub-meta">
           <span class="pub-journal">ACS Photonics</span>
           <span class="pub-year">2017</span>
-          <span class="pub-citations">22 citations</span>
         </div>
       </div>
 
@@ -339,7 +383,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Scientific Reports</span>
           <span class="pub-year">2017</span>
-          <span class="pub-citations">17 citations</span>
         </div>
       </div>
 
@@ -349,7 +392,6 @@
         <div class="pub-meta">
           <span class="pub-journal">Advanced Materials Technologies</span>
           <span class="pub-year">2016</span>
-          <span class="pub-citations">50 citations</span>
         </div>
       </div>
 
