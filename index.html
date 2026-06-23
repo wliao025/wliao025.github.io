@@ -1,26 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wei-Cheng Liao</title>
+  <style>
+    :root {
+      --bg: #f9f9f7;
+      --surface: #ffffff;
+      --border: #e5e5e0;
+      --accent: #2563eb;
+      --text: #1a1a1a;
+      --text-muted: #6b7280;
+      --max-w: 780px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar-placeholder {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #dde4f0;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: var(--accent);
+    }
+
+    .header-info h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .header-info .position {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 48px; }
+
+    section h2 {
+      font-size: 0.75rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    /* ── About ── */
+    .about p {
+      font-size: 1rem;
+      color: #333;
+      max-width: 640px;
+    }
+
+    /* ── Publications ── */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pub-item {
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.15s;
+    }
+    .pub-item:hover { border-color: var(--accent); }
+
+    .pub-title {
+      font-size: 0.95rem;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .pub-authors {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pub-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pub-journal {
+      font-size: 0.83rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    .pub-year {
+      font-size: 0.8rem;
+      font-family: 'Arial', sans-serif;
+      color: var(--text-muted);
+    }
+
+    .pub-citations {
+      font-size: 0.78rem;
+      font-family: 'Arial', sans-serif;
+      color: var(--text-muted);
+      background: #f0f4ff;
+      border-radius: 4px;
+      padding: 1px 7px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Personal Website!</h1>
-    <p>This is my first page hosted with GitHub Pages.</p>
-    <p>Here's some new content!</p>
-    <p>Here's some even newer content!</p>
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Semiconductors & Quantum Materials</li>
-        <li>Near-field Optics</li>
-        <li>Spintronics</li>
-        <li>Numerical Simulations and Optical Modeling</li>
-        <li>Wave Motion Fist</li>
-    </ul>
+<div class="container">
+
+  <header>
+    <div class="avatar-placeholder">W</div>
+    <div class="header-info">
+      <h1>Wei-Cheng Liao</h1>
+      <p class="position">Postdoctoral Researcher · The Pennsylvania State University</p>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=UORXMo4AAAAJ&hl=en" target="_blank">
+          &#x1F4D6; Google Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/wliao025/" target="_blank">
+          &#x1F517; LinkedIn
+        </a>
+        <a href="mailto:wliao025@ucr.edu">
+          &#x2709; wliao025@ucr.edu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      I am a postdoctoral researcher at Penn State University working on near-field optics,
+      quantum materials, and magneto-optical effects. My research focuses on exploring light–matter
+      interactions at the nanoscale, with an emphasis on two-dimensional and magnetic materials.
+    </p>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div class="pub-title">Electrical Detection of Single-Domain Néel Vector Reorientation across the Spin–Flop Transition in Cr₂O₃ Crystals</div>
+        <div class="pub-authors">W.-C. Liao, H. Liu, W. Tan, J. Keagy, J. Chen, J. Shi</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Nano Letters</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-citations">3 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Are random lasers really random?</div>
+        <div class="pub-authors">Y.-T. Hsu, Y.-Z. Chen, Y.-Y. Lin, Y.-M. Liao, H.-Y. Lin, W.-C. Liao, W.-J. Lin, C.-F. Hou, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Journal of Applied Physics</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-citations">4 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Layer-dependence study of two-dimensional ferromagnets: Fe₃GeTe₂ and Fe₅Ge₂Te₂</div>
+        <div class="pub-authors">M. Alghamdi, P. R. Jothi, W.-C. Liao, S. Coh, X. Lin, B. Fokwa, J. Shi</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Applied Physics Letters</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-citations">11 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Metal‐Mediated Directional Capping of Rod‐Packing Metal–Organic Frameworks</div>
+        <div class="pub-authors">A. N. Hong, D. Luong, M. Alghamdi, W.-C. Liao, W. Zhang, E. Kusumoputro, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Chemistry – A European Journal</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-citations">1 citation</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Self-healing nanophotonics: Robust and soft random lasers</div>
+        <div class="pub-authors">Y.-T. Hsu, C.-T. Tai, H.-M. Wu, C.-F. Hou, Y.-M. Liao, W.-C. Liao, G. Haider, Y.-C. Hsiao, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">ACS Nano</span>
+          <span class="pub-year">2019</span>
+          <span class="pub-citations">22 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Inkjet‐printed random lasers</div>
+        <div class="pub-authors">Y.-M. Liao, W.-C. Liao, S.-W. Chang, C.-F. Hou, C.-T. Tai, C.-Y. Su, Y.-T. Hsu, M.-H. Wu, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Advanced Materials Technologies</span>
+          <span class="pub-year">2018</span>
+          <span class="pub-citations">26 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">A white random laser</div>
+        <div class="pub-authors">S.-W. Chang, W.-C. Liao, Y.-M. Liao, H.-I. Lin, H.-Y. Lin, W.-J. Lin, S.-Y. Lin, P. Perumal, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Scientific Reports</span>
+          <span class="pub-year">2018</span>
+          <span class="pub-citations">110 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">All-marine based random lasers</div>
+        <div class="pub-authors">W.-J. Lin, Y.-M. Liao, H.-Y. Lin, G. Haider, S.-Y. Lin, W.-C. Liao, R.-T. Wei, P. Perumal, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Organic Electronics</span>
+          <span class="pub-year">2018</span>
+          <span class="pub-citations">21 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Plasmonic carbon-dot-decorated nanostructured semiconductors for efficient and tunable random laser action</div>
+        <div class="pub-authors">W.-C. Liao, Y.-M. Liao, C.-T. Su, P. Perumal, S.-Y. Lin, W.-J. Lin, C.-H. Chang, H.-I. Lin, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">ACS Applied Nano Materials</span>
+          <span class="pub-year">2017</span>
+          <span class="pub-citations">35 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Integration of nanoscale light emitters and hyperbolic metamaterials: an efficient platform for the enhancement of random laser action</div>
+        <div class="pub-authors">H.-I. Lin, K.-C. Shen, Y.-M. Liao, Y.-H. Li, P. Perumal, G. Haider, B.-H. Cheng, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">ACS Photonics</span>
+          <span class="pub-year">2017</span>
+          <span class="pub-citations">45 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Magnetically controllable random lasers</div>
+        <div class="pub-authors">C.-Y. Tsai, Y.-M. Liao, W.-C. Liao, W.-J. Lin, P. Perumal, H.-H. Hu, S.-Y. Lin, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Advanced Materials Technologies</span>
+          <span class="pub-year">2017</span>
+          <span class="pub-citations">50 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Whispering gallery mode lasing from self-assembled hexagonal perovskite single crystals and porous thin films decorated by dielectric spherical resonators</div>
+        <div class="pub-authors">P. Perumal, C.-S. Wang, K.-M. Boopathi, G. Haider, W.-C. Liao, Y.-F. Chen</div>
+        <div class="pub-meta">
+          <span class="pub-journal">ACS Photonics</span>
+          <span class="pub-year">2017</span>
+          <span class="pub-citations">22 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Diverse Functionalities of Vertically Stacked Graphene/Single layer n-MoS₂/SiO₂/p-GaN Heterostructures</div>
+        <div class="pub-authors">P. Perumal, C. Karuppiah, W.-C. Liao, Y.-R. Liou, Y.-M. Liao, Y.-F. Chen</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Scientific Reports</span>
+          <span class="pub-year">2017</span>
+          <span class="pub-citations">17 citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Highly stretchable label‐like random laser on universal substrates</div>
+        <div class="pub-authors">Y.-M. Liao, Y.-C. Lai, P. Perumal, W.-C. Liao, C.-Y. Chang, C.-S. Liao, S.-Y. Lin, et al.</div>
+        <div class="pub-meta">
+          <span class="pub-journal">Advanced Materials Technologies</span>
+          <span class="pub-year">2016</span>
+          <span class="pub-citations">50 citations</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Wei-Cheng Liao · Penn State University · Last updated June 2026</p>
+  </footer>
+
+</div>
 </body>
 </html>
